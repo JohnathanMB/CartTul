@@ -12,7 +12,7 @@ class CartServiceTest {
     private final CartService cartService = new CartServiceImpl();
 
     @Test
-    public void returCartNotNullWhitID(){
+    public void returnCartNotNullWhitID(){
         //Give
         String cartId = "2021-02-01";
 
