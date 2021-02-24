@@ -3,17 +3,16 @@ package com.johnathanmb.CartTul.model;
 import lombok.*;
 
 /**
- * Modelo de Cart de base de datos
+ * Modelo de producto una vez ingresado en un carrito
  *
  * @author ja.monsalve.bello@gmail.com
  * @since JDK 1.8
  */
-@NoArgsConstructor
 @AllArgsConstructor
-@Getter
+@NoArgsConstructor
 @Setter
+@Getter
 @ToString
-public class Cart {
-    private String id;
-    private String status;
+public class ProductInCart extends Product {
+    private int quantity;
 }

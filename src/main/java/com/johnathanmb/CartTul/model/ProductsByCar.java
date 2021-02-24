@@ -2,7 +2,7 @@ package com.johnathanmb.CartTul.model;
 
 import lombok.*;
 
-/*
+/**
  * Modelo de relación entre producto y cart de base de datos
  *
  * @author ja.monsalve.bello@gmail.com
