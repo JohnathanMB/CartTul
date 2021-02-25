@@ -14,7 +14,7 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-public class ProductByCar {
+public class ProductByCart {
     private String productId;
     private String carId;
     private int quantity;
