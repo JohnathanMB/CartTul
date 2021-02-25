@@ -13,6 +13,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class ProductsByCar {
     private String productId;
     private String carId;

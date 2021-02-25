@@ -13,6 +13,7 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
+@Builder
 public class ProductInCart extends Product {
     private int quantity;
 }

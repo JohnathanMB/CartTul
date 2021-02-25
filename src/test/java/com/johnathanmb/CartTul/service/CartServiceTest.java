@@ -17,10 +17,13 @@ class CartServiceTest {
         String cartId = "2021-02-01";
 
         //When
-        ResponseProductsByCart productsByCart = cartService.consult(cartId);
+        ResponseProductsByCart productsByCartResponse = cartService.consult(cartId);
 
         //Then
-        assertNotNull(productsByCart);
+        assertNotNull(productsByCartResponse);
+        assertEquals(productsByCartResponse.getCart().getId(), cartId);
+        assertEquals(productsByCartResponse.getCart().getStatus(), "pending");
+        assertEquals(productsByCartResponse.getProducts().size(), 2);
     }
 
 

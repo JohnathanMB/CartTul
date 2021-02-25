@@ -13,6 +13,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class Product {
     private String id;
     private String name;

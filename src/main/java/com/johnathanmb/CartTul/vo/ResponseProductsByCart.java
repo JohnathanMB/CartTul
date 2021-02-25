@@ -11,6 +11,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 @ToString
+@Builder
 public class ResponseProductsByCart {
     private ArrayList<ProductInCart> products;
     private Cart cart;

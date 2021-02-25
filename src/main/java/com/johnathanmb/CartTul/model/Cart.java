@@ -13,6 +13,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@Builder
 public class Cart {
     private String id;
     private String status;
