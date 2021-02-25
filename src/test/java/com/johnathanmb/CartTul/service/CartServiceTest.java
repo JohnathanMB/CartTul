@@ -23,7 +23,7 @@ class CartServiceTest {
         assertNotNull(productsByCartResponse);
         assertEquals(productsByCartResponse.getCart().getId(), cartId);
         assertEquals(productsByCartResponse.getCart().getStatus(), "pending");
-        assertEquals(productsByCartResponse.getProducts().size(), 2);
+        assertEquals(productsByCartResponse.getProducts().size(), 3);
     }
 
 

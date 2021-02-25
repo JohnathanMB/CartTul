@@ -1,6 +1,7 @@
 package com.johnathanmb.CartTul.model;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Modelo de producto una vez ingresado en un carrito
@@ -13,7 +14,7 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-@Builder
+@SuperBuilder
 public class ProductInCart extends Product {
     private int quantity;
 }

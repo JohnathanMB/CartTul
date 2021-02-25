@@ -1,6 +1,7 @@
 package com.johnathanmb.CartTul.model;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 /**
  * Modelo de producto de base de datos
@@ -13,7 +14,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 public class Product {
     private String id;
     private String name;
