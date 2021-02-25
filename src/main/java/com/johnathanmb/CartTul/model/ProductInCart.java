@@ -14,7 +14,6 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @Getter
 @ToString
-@SuperBuilder
 public class ProductInCart extends Product {
     private int quantity;
 
