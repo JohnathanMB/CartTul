@@ -4,6 +4,7 @@ import com.johnathanmb.CartTul.model.Cart;
 import com.johnathanmb.CartTul.model.ProductByCart;
 import com.johnathanmb.CartTul.repository.CartRepository;
 import com.johnathanmb.CartTul.util.BuildedObjects;
+import com.johnathanmb.CartTul.util.CartConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -36,4 +37,13 @@ public class CartRepositoryImpl implements CartRepository {
     public void saveCart(Cart cart) {
         buildedObjects.getCartList().add(cart);
     }
+
+    @Override
+    public Cart checkout(String cartId) {
+        Cart cart = this.findById(cartId);
+        cart.setStatus(CartConstants.CART_STATUS_COMPLETED);
+        return cart;
+    }
+
+
 }

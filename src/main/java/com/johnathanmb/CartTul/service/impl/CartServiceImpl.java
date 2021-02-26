@@ -1,7 +1,6 @@
 package com.johnathanmb.CartTul.service.impl;
 
-import com.johnathanmb.CartTul.handler.GenericResponseAddProduct;
-import com.johnathanmb.CartTul.handler.GenericResponseProductByCartMapper;
+import com.johnathanmb.CartTul.handler.GenericResponseMapper;
 import com.johnathanmb.CartTul.model.Cart;
 import com.johnathanmb.CartTul.model.Product;
 import com.johnathanmb.CartTul.model.ProductByCart;
@@ -34,7 +33,7 @@ public class CartServiceImpl implements CartService {
         ArrayList<ProductByCart> productByCartList = productByCartRepository.findByCartId(id);
         ArrayList<Product> productsList = productRepository.findVariusProducts(productByCartList);
 
-        return GenericResponseProductByCartMapper.mapGenericResponse(cart, productByCartList, productsList);
+        return GenericResponseMapper.mapProductByCartResponse(cart, productByCartList, productsList);
     }
 
     @Override
@@ -45,12 +44,19 @@ public class CartServiceImpl implements CartService {
         Product product = productRepository.findById(requestProductInCart.getProductId());
         int countCarts = cartRepository.getCount();
 
-        GenericResponse genericResponse = GenericResponseAddProduct.mapResponse(requestProductInCart, cart, product, productByCartList, countCarts);
+        GenericResponse genericResponse = GenericResponseMapper.mapAddProductResponse(requestProductInCart, cart, product, productByCartList, countCarts);
+        //Esta parte de la lógica no debería ir acá, se debe poner por la falta de uso de base de datos
         if (genericResponse.getCode() == CartConstants.SUCCESS_CODE){
             cartRepository.saveCart(new Cart(((ProductByCart)genericResponse.getData()).getCartId(), CartConstants.CART_STATUS_PENDING));
             productByCartRepository.saveProductByCart((ProductByCart) genericResponse.getData());
         }
 
         return genericResponse;
+    }
+
+    @Override
+    public GenericResponse checkoutCart(String cartID) {
+        cartRepository.checkout(cartID);
+        return this.consult(cartID);
     }
 }

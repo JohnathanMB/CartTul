@@ -24,4 +24,9 @@ public class CartServiceController {
         return cartService.addProduct(requestProductInCart);
     }
 
+    @RequestMapping(value = CartConstants.CHECKOUT_CART, method = RequestMethod.GET)
+    public GenericResponse checkoutCart(@PathVariable("cartID") String cartID){
+        return cartService.checkoutCart(cartID);
+    }
+
 }

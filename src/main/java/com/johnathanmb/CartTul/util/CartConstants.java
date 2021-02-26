@@ -21,4 +21,5 @@ public class CartConstants {
     public static final String CART_STATUS_PENDING = "pending";
     public static final String CART_STATUS_COMPLETED = "completed";
 
+    public static final String CHECKOUT_CART = "/checkout-cart/{cartID}";
 }
