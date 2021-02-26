@@ -31,4 +31,22 @@ public class ProductByCartRepositoryImpl implements ProductByCartRepository {
     public void saveProductByCart(ProductByCart productByCart) {
         buildedObjects.getProductByCartList().add(productByCart);
     }
+
+    @Override
+    public ProductByCart findByCartIdProducId(ProductByCart productByCart) {
+        return buildedObjects.getProductByCartList().stream()
+                .filter(productByCartFilter -> productByCartFilter.getCartId().equals(productByCart.getCartId()) && productByCartFilter.getProductId().equals(productByCart.getProductId()))
+                .findFirst()
+                .orElse(null);
+
+    }
+
+    @Override
+    public void deleteProductByCar(ProductByCart productByCart) {
+        buildedObjects.getProductByCartList().remove(
+                this.findByCartIdProducId(productByCart)
+        );
+    }
+
+
 }

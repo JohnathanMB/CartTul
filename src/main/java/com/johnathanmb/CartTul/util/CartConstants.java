@@ -17,9 +17,12 @@ public class CartConstants {
     public static final String LIST_PRODUCTS_IN_CART = "/list-products-cart/{cartID}";
     public static final String ADD_PRODCUT_IN_CART = "/add-product-in-cart";
 
+    public static final String CHECKOUT_CART = "/checkout-cart/{cartID}";
+    public static final String DELETE_PRODUCT_IN_CART = "/delete-product-in-cart";
+
     //CartObject
     public static final String CART_STATUS_PENDING = "pending";
     public static final String CART_STATUS_COMPLETED = "completed";
 
-    public static final String CHECKOUT_CART = "/checkout-cart/{cartID}";
+
 }
