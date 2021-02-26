@@ -10,4 +10,5 @@ public interface CartRepository {
     public ArrayList<Cart> getAll();
     public int getCount();
     public void saveCart(Cart cart);
+    public Cart checkout(String cartId);
 }
