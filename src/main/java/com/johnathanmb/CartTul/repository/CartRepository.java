@@ -1,7 +1,7 @@
 package com.johnathanmb.CartTul.repository;
 
-import org.springframework.stereotype.Repository;
+import com.johnathanmb.CartTul.model.Cart;
 
-@Repository
-public class CartRepository {
+public interface CartRepository {
+    Cart findById(String id);
 }
