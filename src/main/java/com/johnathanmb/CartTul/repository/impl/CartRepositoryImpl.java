@@ -41,7 +41,9 @@ public class CartRepositoryImpl implements CartRepository {
     @Override
     public Cart checkout(String cartId) {
         Cart cart = this.findById(cartId);
-        cart.setStatus(CartConstants.CART_STATUS_COMPLETED);
+        if(cart!=null){
+            cart.setStatus(CartConstants.CART_STATUS_COMPLETED);
+        }
         return cart;
     }
 
