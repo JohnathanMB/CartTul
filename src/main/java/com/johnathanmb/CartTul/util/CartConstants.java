@@ -25,4 +25,5 @@ public class CartConstants {
     public static final String CART_STATUS_COMPLETED = "completed";
 
 
+    public static final String DELETE_PRODUCT_IN_CART_MESSAGE_VOID = "El carrito quedó vacío";
 }
