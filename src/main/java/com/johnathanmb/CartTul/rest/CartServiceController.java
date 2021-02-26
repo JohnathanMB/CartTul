@@ -20,14 +20,14 @@ public class CartServiceController {
         return cartService.consult(cartID);
     }
 
-    @RequestMapping(value = CartConstants.ADD_PRODCUT_IN_CART, method = RequestMethod.POST)
-    public GenericResponse addProductInCart(@RequestBody RequestProductInCart requestProductInCart){
-        return cartService.addProduct(requestProductInCart);
-    }
-
     @RequestMapping(value = CartConstants.CHECKOUT_CART, method = RequestMethod.GET)
     public GenericResponse checkoutCart(@PathVariable("cartID") String cartID){
         return cartService.checkoutCart(cartID);
+    }
+
+    @RequestMapping(value = CartConstants.ADD_PRODCUT_IN_CART, method = RequestMethod.POST)
+    public GenericResponse addProductInCart(@RequestBody RequestProductInCart requestProductInCart){
+        return cartService.addProduct(requestProductInCart);
     }
 
     @RequestMapping(value = CartConstants.DELETE_PRODUCT_IN_CART, method = RequestMethod.POST)
