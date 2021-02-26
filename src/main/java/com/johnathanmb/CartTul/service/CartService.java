@@ -11,4 +11,6 @@ public interface CartService {
     public GenericResponse checkoutCart(String cartId);
 
     public GenericResponse deleteProductInCart(RequestProductInCart requestProductInCart);
+
+    public GenericResponse modifyProductInCart(RequestProductInCart requestProductInCart);
 }

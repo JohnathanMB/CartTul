@@ -1,5 +1,6 @@
 package com.johnathanmb.CartTul.rest;
 
+import com.johnathanmb.CartTul.model.Cart;
 import com.johnathanmb.CartTul.service.CartService;
 import com.johnathanmb.CartTul.util.CartConstants;
 import com.johnathanmb.CartTul.vo.GenericResponse;
@@ -32,6 +33,11 @@ public class CartServiceController {
     @RequestMapping(value = CartConstants.DELETE_PRODUCT_IN_CART, method = RequestMethod.POST)
     public GenericResponse deleteProductInCart(@RequestBody RequestProductInCart requestProductInCart){
         return cartService.deleteProductInCart(requestProductInCart);
+    }
+
+    @RequestMapping(value = CartConstants.MODIFY_PRODUCT_IN_CART, method = RequestMethod.PUT)
+    public GenericResponse modifyProductInCart(@RequestBody RequestProductInCart requestProductInCart){
+        return  cartService.modifyProductInCart(requestProductInCart);
     }
 
 }
