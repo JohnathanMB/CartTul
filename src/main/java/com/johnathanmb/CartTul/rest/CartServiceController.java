@@ -29,4 +29,9 @@ public class CartServiceController {
         return cartService.checkoutCart(cartID);
     }
 
+    @RequestMapping(value = CartConstants.DELETE_PRODUCT_IN_CART, method = RequestMethod.POST)
+    public GenericResponse deleteProductInCart(@RequestBody RequestProductInCart requestProductInCart){
+        return cartService.deleteProductInCart(requestProductInCart);
+    }
+
 }

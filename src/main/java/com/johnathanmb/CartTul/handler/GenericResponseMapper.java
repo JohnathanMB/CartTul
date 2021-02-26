@@ -60,4 +60,13 @@ public class GenericResponseMapper {
         return genericResponse;
     }
 
+    public static GenericResponse mapDeleteProductResponse(GenericResponse genericResponse) {
+
+        if(genericResponse.getData() == null){
+            genericResponse.setCode(CartConstants.SUCCESS_CODE);
+            genericResponse.setMessage(CartConstants.DELETE_PRODUCT_IN_CART_MESSAGE_VOID);
+        }
+
+        return genericResponse;
+    }
 }

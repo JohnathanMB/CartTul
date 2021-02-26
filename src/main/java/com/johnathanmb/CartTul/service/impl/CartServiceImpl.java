@@ -59,4 +59,11 @@ public class CartServiceImpl implements CartService {
         cartRepository.checkout(cartID);
         return this.consult(cartID);
     }
+
+    @Override
+    public GenericResponse deleteProductInCart(RequestProductInCart requestProductInCart) {
+        productByCartRepository.deleteProductByCar(requestProductInCart);
+
+        return GenericResponseMapper.mapDeleteProductResponse(this.consult(requestProductInCart.getCartId()));
+    }
 }
