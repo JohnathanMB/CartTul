@@ -19,6 +19,7 @@ public class CartConstants {
 
     public static final String CHECKOUT_CART = "/checkout-cart/{cartID}";
     public static final String DELETE_PRODUCT_IN_CART = "/delete-product-in-cart";
+    public static final String MODIFY_PRODUCT_IN_CART = "/modify-product-in-cart";
 
     //CartObject
     public static final String CART_STATUS_PENDING = "pending";
@@ -26,4 +27,5 @@ public class CartConstants {
 
 
     public static final String DELETE_PRODUCT_IN_CART_MESSAGE_VOID = "El carrito quedó vacío";
+
 }
