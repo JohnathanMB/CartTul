@@ -4,12 +4,17 @@ import com.johnathanmb.CartTul.service.CartService;
 import com.johnathanmb.CartTul.util.CartConstants;
 import com.johnathanmb.CartTul.vo.ResponseProductsByCart;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(CartConstants.CART_SERVICE)
 @CrossOrigin
 public class CartServiceController {
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
+
     @Autowired
     CartService cartService;
 
