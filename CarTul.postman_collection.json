@@ -1,0 +1,150 @@
+{
+	"id": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+	"name": "CarTul",
+	"description": "",
+	"order": [
+		"2e14dc3c-680d-ce01-b760-6dbad24cc334",
+		"fbfe12ba-33a2-f5a3-bd1d-0dd6447328b8",
+		"9fb70b4e-a94f-fbd2-ed2d-2500b0a1e9b1",
+		"37a950a8-cd13-514a-a0c6-044a5afbe263",
+		"711dd1df-7262-3623-7814-e591c9729925"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1614350160461,
+	"owner": "6793573",
+	"public": false,
+	"requests": [
+		{
+			"id": "2e14dc3c-680d-ce01-b760-6dbad24cc334",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/cart/list-products-cart/2020-02-5",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614376251102,
+			"name": "List-products-in-cart",
+			"description": "Lista los productos en un carrito dado el id del carrito",
+			"collectionId": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+			"responses": []
+		},
+		{
+			"id": "37a950a8-cd13-514a-a0c6-044a5afbe263",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cart/delete-product-in-cart",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614376253242,
+			"name": "delete-product-in-cart",
+			"description": "Serivicio para elminar producto de un carrito\n",
+			"collectionId": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+			"responses": [],
+			"rawModeData": "{\n\t\"cartId\": \"2021-02-1\",\n\t\"productId\": \"KIT-DEST-10-101123\",\n\t\"quantity\": 2\n}"
+		},
+		{
+			"id": "711dd1df-7262-3623-7814-e591c9729925",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cart/modify-product-in-cart",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614376253883,
+			"name": "Modify-producto-in-cart",
+			"description": "Modificar profucto en carro",
+			"collectionId": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+			"responses": [],
+			"rawModeData": "{\n\t\"cartId\": \"2021-02-1\",\n\t\"productId\": \"TAL-PER-101\",\n\t\"quantity\": 1000\n}"
+		},
+		{
+			"id": "9fb70b4e-a94f-fbd2-ed2d-2500b0a1e9b1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/cart/checkout-cart/2021-02-6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614376252595,
+			"name": "checkout-cart",
+			"description": "Servicio de checkout.\nSe necesita el id del cart, id producto y cantidad de producto",
+			"collectionId": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+			"responses": [],
+			"rawModeData": "{\n\t\"cartId\": \"\",\n\t\"productId\": \"KIT-DEST-10-101\",\n\t\"quantity\": 2\n}"
+		},
+		{
+			"id": "fbfe12ba-33a2-f5a3-bd1d-0dd6447328b8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cart/add-product-in-cart",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614376251899,
+			"name": "Add-product",
+			"description": "Agregar un nuevo producto a un carrito dado id de carrito, id de producto y cantidad de productos",
+			"collectionId": "a94b3783-d6bc-4fb3-d050-b8a95959e0ca",
+			"responses": [],
+			"rawModeData": "{\n\t\"cartId\": \"\",\n\t\"productId\": \"KIT-DEST-10-101\",\n\t\"quantity\": 2\n}"
+		}
+	]
+}
