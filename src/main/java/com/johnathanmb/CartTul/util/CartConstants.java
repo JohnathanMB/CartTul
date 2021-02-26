@@ -12,5 +12,5 @@ public class CartConstants {
     //CartService
     public static final String CART_SERVICE = "/cart";
 
-    public static final String LIST_PRODUCTS_IN_CART = "/list-products-cart";
+    public static final String LIST_PRODUCTS_IN_CART = "/list-products-cart/{cartID}";
 }

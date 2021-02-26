@@ -4,10 +4,7 @@ import com.johnathanmb.CartTul.service.CartService;
 import com.johnathanmb.CartTul.util.CartConstants;
 import com.johnathanmb.CartTul.vo.ResponseProductsByCart;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(CartConstants.CART_SERVICE)
@@ -17,8 +14,8 @@ public class CartServiceController {
     CartService cartService;
 
     @RequestMapping(value = CartConstants.LIST_PRODUCTS_IN_CART, method = RequestMethod.GET)
-    public ResponseProductsByCart listProductsInCart(){
-        return cartService.consult("1");
+    public ResponseProductsByCart listProductsInCart(@PathVariable("cartID") String cartID){
+        return cartService.consult(cartID);
     }
 
 }
