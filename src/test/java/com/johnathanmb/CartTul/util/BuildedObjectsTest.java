@@ -23,17 +23,17 @@ public class BuildedObjectsTest {
             .status("pending")
             .build();
     private ProductByCart productByCart1 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-01")
             .productId("TAL-PER-101")
             .quantity(3)
             .build();
     private ProductByCart productByCart2 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-01")
             .productId("BAL-CER-101")
             .quantity(2)
             .build();
     private ProductByCart productByCart3 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-01")
             .productId("KIT-DEST-10-101")
             .quantity(5)
             .build();

@@ -1,7 +1,10 @@
 package com.johnathanmb.CartTul.service;
 
-import com.johnathanmb.CartTul.vo.ResponseProductsByCart;
+import com.johnathanmb.CartTul.vo.GenericResponse;
+import com.johnathanmb.CartTul.vo.RequestProductInCart;
 
 public interface CartService {
-    ResponseProductsByCart consult(String id);
+    GenericResponse consult(String id);
+
+    GenericResponse addProduct(RequestProductInCart requestProductInCart);
 }

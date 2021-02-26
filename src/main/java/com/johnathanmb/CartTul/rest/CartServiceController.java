@@ -2,25 +2,26 @@ package com.johnathanmb.CartTul.rest;
 
 import com.johnathanmb.CartTul.service.CartService;
 import com.johnathanmb.CartTul.util.CartConstants;
-import com.johnathanmb.CartTul.vo.ResponseProductsByCart;
+import com.johnathanmb.CartTul.vo.GenericResponse;
+import com.johnathanmb.CartTul.vo.RequestProductInCart;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(CartConstants.CART_SERVICE)
 @CrossOrigin
 public class CartServiceController {
-
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
     @Autowired
     CartService cartService;
 
     @RequestMapping(value = CartConstants.LIST_PRODUCTS_IN_CART, method = RequestMethod.GET)
-    public ResponseProductsByCart listProductsInCart(@PathVariable("cartID") String cartID){
+    public GenericResponse listProductsInCart(@PathVariable("cartID") String cartID){
         return cartService.consult(cartID);
+    }
+
+    @RequestMapping(value = CartConstants.ADD_PRODCUT_IN_CART, method = RequestMethod.POST)
+    public GenericResponse addProductInCart(@RequestBody RequestProductInCart requestProductInCart){
+        return cartService.addProduct(requestProductInCart);
     }
 
 }

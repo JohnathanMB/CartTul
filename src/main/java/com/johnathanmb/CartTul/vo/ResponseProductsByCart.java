@@ -4,6 +4,7 @@ import com.johnathanmb.CartTul.model.Cart;
 import com.johnathanmb.CartTul.model.ProductInCart;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @AllArgsConstructor
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 @ToString
-public class ResponseProductsByCart {
+public class ResponseProductsByCart implements Serializable {
     private ArrayList<ProductInCart> products;
     private Cart cart;
 }

@@ -16,6 +16,6 @@ import lombok.*;
 @Builder
 public class ProductByCart {
     private String productId;
-    private String carId;
+    private String cartId;
     private int quantity;
 }

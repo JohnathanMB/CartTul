@@ -18,7 +18,17 @@ public class ProductByCartRepositoryImpl implements ProductByCartRepository {
     @Override
     public ArrayList<ProductByCart> findByCartId(String cardId) {
         return (ArrayList<ProductByCart>) buildedObjects.getProductByCartList().stream()
-                .filter(productByCart -> cardId.equals(productByCart.getCarId()))
+                .filter(productByCart -> cardId.equals(productByCart.getCartId()))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public ArrayList<ProductByCart> getAll() {
+        return buildedObjects.getProductByCartList();
+    }
+
+    @Override
+    public void saveProductByCart(ProductByCart productByCart) {
+        buildedObjects.getProductByCartList().add(productByCart);
     }
 }

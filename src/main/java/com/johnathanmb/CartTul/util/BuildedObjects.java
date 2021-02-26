@@ -5,35 +5,36 @@ import com.johnathanmb.CartTul.model.Product;
 import com.johnathanmb.CartTul.model.ProductByCart;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @Component
-public class BuildedObjects {
+public class BuildedObjects implements Serializable {
 
     private Cart cart1 = Cart.builder()
-            .id("2021-02-01")
+            .id("2021-02-1")
             .status("pending")
             .build();
     private Cart cart2 = Cart.builder()
-            .id("2021-02-02")
+            .id("2021-02-2")
             .status("pending")
             .build();
     private Cart cart3 = Cart.builder()
-            .id("2021-02-03")
+            .id("2021-02-3")
             .status("pending")
             .build();
     private ProductByCart productByCart1 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-1")
             .productId("TAL-PER-101")
             .quantity(3)
             .build();
     private ProductByCart productByCart2 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-1")
             .productId("BAL-CER-101")
             .quantity(2)
             .build();
     private ProductByCart productByCart3 = ProductByCart.builder()
-            .carId("2021-02-01")
+            .cartId("2021-02-1")
             .productId("KIT-DEST-10-101")
             .quantity(5)
             .build();
